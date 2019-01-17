@@ -1,6 +1,7 @@
 # Bag o' Loot
 
-This exercises will help with your comprehension of [command line parameters](http://www.pythonforbeginners.com/argv/more-fun-with-sys-argv).
+This exercise requires the use of [command line parameters](http://www.pythonforbeginners.com/argv/more-fun-with-sys-argv).
+It also touches on many of the things you've learned up to this point in Python and SQL. It's  good measure of your comfort level with the server-side concepts you'll need to understand before we move on to building applications with Django
 
 ## Setup
 
@@ -48,22 +49,15 @@ You have an acquaintance whose job is to, once a year, delivery presents to the 
 
 ## Requirements
 
-```python
-# This is only an example. If I find this code in your project
-#  I will make you go back and delete it and write your own test.
-def test_toys_for_child_can_be_added_to_bag ()
-{
-    lootBag = Bag()
-    lootBag.add_toy_for_child("kite", "suzy");
-    self.assertEqual("kite", lootBag.child_items("suzy")[0]);
-}
-```
+### Testing
+Each feature of the app must be tested. Use Python's unittest module to create test coverage for the following app requirements
 
 1. Items can be added to bag, and assigned to a child.
 1. Items can be removed from bag, per child. Removing `ball` from the bag should not be allowed. A child's name must be specified.
 1. Must be able to list all children who are getting a toy.
 1. Must be able to list all toys for a given child's name.
 1. Must be able to set the *delivered* property of a child's toys -- which defaults to `false`-- to `true`.
+
 
 ## Bonus Features
 
@@ -72,34 +66,5 @@ def test_toys_for_child_can_be_added_to_bag ()
 
 ## Persistent Storage
 
-You must persist the data to disk, so that you can use it between executions of the application. You will need to write the data into text files. As for how you store it, create a quick ERD that represents the two types of data in this application.
-
-How are they related to each other?
-
-How can you store that relationship when you are writing the data to disk?
-
-> **Pro tip:** The [uuid](https://docs.python.org/3/library/uuid.html?highlight=uuid#example) module in Python can generate universally unique identifiers for each set of data that you need to store. For example, there will be children with the same name, so you will need a truly unique identifier for each one.
-
-<table>
-<tr>
-    <th><h5>child_id</h5></th>
-    <th><h5>child_name</h5></th>
-</tr>
-<tr>
-  <td>
-  a8098c1a-f86e-11da-bd1a-00112444be1e
-  </td>
-  <td>
-  Victor Hoebling
-  </td>
-</tr>
-<tr>
-  <td>
-  6fa459ea-ee8a-3ca4-894e-db77e160355e
-  </td>
-  <td>
-  Franz Ferdinand
-  </td>
-</tr>
-
-</table>
+You must persist the data to disk, so that you can use it between executions of the application. You will need to write the data to an sqlite db using the sqlite3 module.
+Create a quick ERD that represents the two types of data in this application. Then use that ERD to inform the tables you'll create in a `.sql` file that, when executed, will build your db tables.
