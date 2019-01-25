@@ -16,7 +16,7 @@ Support your teammates. Encourage them. Help them. Laugh with  them. You get bac
 
 — There are no awards for pulling the most tickets. Truly choose what you estimate your team can complete.
 
-— Sprint planning means reviewing tickets, pulling the ones you want to do, committing to them, and creating a Milestones doc with the learning team. It's not project planning. Save the architecting and whiteboarding your master plan for after the spring planning ceremony
+— Sprint planning means reviewing tickets, pulling the ones you want to do, committing to them, and creating a Milestones doc with the learning team. It's not project planning. Save the architecting and whiteboarding your master plan for after the sprint planning ceremony
 
 — Don't skimp on mapping out the relationships and the consequences of those relationships when adding and changing data - especially what it means to delete something that exists as a [foreign key](https://stackoverflow.com/questions/8042845/django-how-to-enable-foreign-keys-in-sqlite3-backend) somewhere else
 
@@ -24,7 +24,7 @@ But also consider not allowing certain things to be deleted:
 https://github.com/makinacorpus/django-safedelete
 
 ## Setup
-— Each team needs to make its own [ORGANIZATION]([https://help.github.com/articles/creating-a-new-organization-from-scratch/), and add all of your instructors as members. Name your org after your group moniker.
+— Each team needs to make its own [ORGANIZATION]([https://help.github.com/articles/creating-a-new-organization-from-scratch/), and add all of your instructors as *owners*. Name your org after your group moniker.
 
 — `.gitignore` your db. Everyone maintain their own local copy
 
